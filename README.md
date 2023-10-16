@@ -15,6 +15,6 @@ Classification for 100 programming language and extensions.
 
 | Модель   | Accuracy | F1 |
 |----------|----------|----------|
-| CatBoost | 0.65     |  0.83  |
+| CatBoost | 0.85     |  0.83  |
 | RNN      | 0.98     | 0.84   |
 
