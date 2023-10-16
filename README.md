@@ -12,3 +12,9 @@ Classification for 100 programming language and extensions.
 Модели были протестированы как классические: `RandomForest`, `LogReg`, `Gradient Boosting`, `Fasttext`, так и глубинные: `RNN`, [CodeBert](https://huggingface.co/huggingface/CodeBERTa-language-id), который в основе использует RoBerta.
 
 По качеству хуже всего показали себя `RandomForest`, `LogReg`, `Fasttext` и `CodeBert`. Последний не удался, так как было мало времени на обучение, и просто было не успеть натренировать модель + есть ограничение на модель: инциализация + предикт не должен был превышать 10мс, поэтому модель недообучилась и была брошена, но запустить её трейн можно. Лучше всего себя показали `Gradient Boosting`, который был в виде библиотеки `CatBoost`, и `RNN`, который был в виде `LSTM`. 
+
+| Модель   | Accuracy | F1 |
+|----------|----------|----------|
+| CatBoost | 0.65     |  0.83  |
+| RNN      | 0.98     | 0.84   |
+
